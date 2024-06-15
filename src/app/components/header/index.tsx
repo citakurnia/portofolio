@@ -19,7 +19,7 @@ export default function Header() {
           ABOUT ME
         </Link>
         <Link href="/pages/portofolio" className="hover:text-primary-deep-blue">
-          PORTOFOLIO
+          PORTFOLIO
         </Link>
         <Link href="/pages/contact" className="hover:text-primary-deep-blue">
           CONTACT
@@ -30,11 +30,9 @@ export default function Header() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="md:hidden">
-          <button className="focus:outline-none">
-            <SvgMenuButton />
-          </button>
-        </div>
+        <button className="focus:outline-none py-2" aria-label="open menu">
+          <SvgMenuButton />
+        </button>
         {isHovered && (
           <div className="flex flex-col md:hidden bg-primary-soft-pink/80 shadow-lg rounded-lg p-4 absolute top-12 right-4 w-40">
             <Link
@@ -49,7 +47,7 @@ export default function Header() {
               className="block mb-4 hover:text-primary-deep-blue text-center"
               onClick={() => setIsHovered(false)}
             >
-              PORTOFOLIO
+              PORTFOLIO
             </Link>
             <Link
               href="/pages/contact"
