@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Card from "./card";
-import TextHome from "./textHome";
+import Card from "./component/Card";
+import Content from "./component/Content";
 
-export default function Home() {
+export default function HomeView() {
   return (
     <>
       <Head>
@@ -18,7 +18,7 @@ export default function Home() {
           <Card />
         </div>
         <div className="text-center z-10 mx-4 md:text-left mt-8 md:mt-0 md:w-1/2 lg:pr-10 xl:pr-60 xl:w-3/5 ">
-          <TextHome />
+          <Content />
         </div>
       </div>
     </>
