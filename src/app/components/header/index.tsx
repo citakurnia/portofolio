@@ -34,6 +34,7 @@ export default function Header() {
       <nav className="hidden md:flex md:pr-4 md:space-x-3 lg:space-x-6">
         {menuList.map((menu) => (
           <Link
+            key={menu.label}
             href={menu.href}
             className={`hover:text-primary-deep-blue w-24 text-end ${
               pathname === menu.href && " text-primary-deep-blue"
@@ -55,6 +56,7 @@ export default function Header() {
           <div className="flex flex-col md:hidden bg-primary-soft-pink/80 shadow-lg rounded-lg p-4 absolute top-12 right-4 w-40 align-middle justify-center space-y-4">
             {menuList.map((menu) => (
               <Link
+                key={menu.label}
                 href={menu.href}
                 className={`block hover:text-primary-deep-blue text-center ${
                   pathname === menu.href && " text-primary-deep-blue"
