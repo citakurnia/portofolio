@@ -28,7 +28,7 @@ export default function Header() {
     <header className="flex justify-between items-center px-2">
       <div className="flex items-center space-x-2">
         <span className="bg-primary-deep-blue h-4 w-4 inline-block rounded-full"></span>
-        <span className="text-lg font-bold">Cita Kurnia</span>
+        <span className="text-normal sm:text-lg font-bold">Cita Kurnia</span>
         <span>/ Full Stack Developer</span>
       </div>
       <nav className="hidden md:flex md:pr-4 md:space-x-3 lg:space-x-6">

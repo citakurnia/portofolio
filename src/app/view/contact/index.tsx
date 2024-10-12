@@ -15,7 +15,7 @@ export default function ContactView() {
               Feel free to reach out for collaboration or inquiries!
             </p>
             <div>
-              <div className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row justify-between px-12 md:px-28 xl:px-72 pt-4">
+              <div className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row justify-between px-4 sm:px-12 md:px-28 xl:px-72 pt-4">
                 <div className="flex flex-col items-center">
                   <a
                     aria-label="Send email to Cita Kurnia with gmail"
