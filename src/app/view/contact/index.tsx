@@ -7,7 +7,7 @@ export default function ContactView() {
     <>
       <div className="flex flex-col md:flex-row justify-center items-center container mx-auto">
         <div className="relative z-10 w-[80vw]">
-          <div className="relative w-full p-4 py-8 md:py-12 rounded-lg sm:rounded-full shadow-xl bg-primary-med-blue/20">
+          <div className="relative w-full p-4 py-8 md:py-12 rounded-lg sm:rounded-full shadow-lg bg-primary-med-blue/20">
             <div className="font-semibold text-xl sm:text-2xl text-center">
               Contact Here
             </div>

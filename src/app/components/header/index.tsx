@@ -7,15 +7,15 @@ import { usePathname } from "next/navigation";
 
 const menuList = [
   {
-    label: "ABOUT ME",
+    label: "About Me",
     href: "/",
   },
   {
-    label: "PROJECT",
+    label: "Project",
     href: "/project",
   },
   {
-    label: "CONTACT",
+    label: "Contact",
     href: "/contact",
   },
 ];
@@ -31,12 +31,12 @@ export default function Header() {
         <span className="text-normal sm:text-lg font-bold">Cita Kurnia</span>
         <span>/ Full Stack Developer</span>
       </div>
-      <nav className="hidden md:flex md:pr-4 md:space-x-3 lg:space-x-6">
+      <nav className="hidden md:flex md:pr-4 space-x-1">
         {menuList.map((menu) => (
           <Link
             key={menu.label}
             href={menu.href}
-            className={`hover:text-primary-deep-blue w-24 text-end ${
+            className={`hover:text-primary-deep-blue w-20 text-end ${
               pathname === menu.href && " text-primary-deep-blue"
             }`}
           >
