@@ -21,6 +21,13 @@ import {
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Github, Link } from "lucide-react";
+import { Loader2 } from "lucide-react"; // Loader icon from Lucide
+
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center absolute inset-0 bg-white">
+    <Loader2 className="animate-spin w-10 h-10 text-primary-deep-blue" />
+  </div>
+);
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -118,20 +125,32 @@ function ImagePreview({
   index: number;
 }) {
   const [currentIndex, setCurrentIndex] = useState(index);
+  const [loading, setLoading] = useState(true);
 
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setLoading(true);
   };
 
   const prevImage = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
+    setLoading(true);
+  };
+
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
+
+  const handleImageError = () => {
+    setLoading(false);
   };
 
   return (
     <div className="relative w-auto h-auto">
       <span>{images[currentIndex].alt}</span>
+      {loading && <LoadingSpinner />}
       <Image
         src={images[currentIndex].name}
         alt={images[currentIndex].alt}
@@ -139,6 +158,8 @@ function ImagePreview({
         width={1500}
         height={1000}
         quality={100}
+        onLoad={handleImageLoad}
+        onError={handleImageError}
       />
       <Button
         variant="ghost"
