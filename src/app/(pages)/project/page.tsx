@@ -1,3 +1,5 @@
-export default function Portofolio() {
-  return <div>ini portfolio</div>;
+import ProjectView from "@/app/view/project";
+
+export default function Project() {
+  return <ProjectView />;
 }
