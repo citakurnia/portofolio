@@ -13,7 +13,7 @@ export default function HomeView() {
         />
       </Head>
       <div className="flex flex-col md:flex-row justify-center items-center container mx-auto">
-        <div className="relative z-10 hidden xl:block xl:w-1/4" />
+        <div className="relative z-10 hidden xl:block xl:w-1/5 2xl:w-1/4" />
         <div className="relative z-10 w-full px-4 md:w-1/2 lg:w-1/3 mb-5 md:mb-0 md:mr-8">
           <Card />
         </div>
