@@ -3,7 +3,7 @@ import { ProjectCard } from "./component/ProjectCard";
 export type Project = {
   id: number;
   title: string;
-  description: string;
+  description: string[];
   images: {
     name: string;
     alt: string;
@@ -18,8 +18,10 @@ const projects: Project[] = [
   {
     id: 1,
     title: "SIGMART",
-    description:
-      "Sigmart is a responsive multi-branch online grocery app designed for a seamless experience for both customers and admins, similar to KlikIndomaret. It features location-based search, allowing customers to shop from their nearest store and manage multiple addresses. For admins, it offers product management with stock-tracking via an integrated journaling system. The platform supports diverse promotions, including store-specific offers, product discounts, and referral rewards, while providing detailed sales and inventory reports for data-driven insights across branches.",
+    description: [
+      `Sigmart is a responsive multi-branch online grocery app designed for a seamless experience for both customers and admins, similar to KlikIndomaret. It features location-based search, allowing customers to shop from their nearest store and manage multiple addresses.`,
+      `For admins, it offers product management with stock-tracking via an integrated journaling system. The platform supports diverse promotions, including store-specific offers, product discounts, and referral rewards, while providing detailed sales and inventory reports for data-driven insights across branches.`,
+    ],
     images: [
       { name: "/sigmart1.png", alt: "Landing page" },
       { name: "/sigmart2.png", alt: "Login" },
@@ -50,8 +52,10 @@ const projects: Project[] = [
   {
     id: 2,
     title: "EventCreate",
-    description:
-      "EventCreate is a responsive event management platform designed to streamline the process for organizers and attendees alike. Organizers can effortlessly create and promote events, offering multiple ticket categories and time-based promotions or discounts using coupons. The platform includes a referral program that rewards users with points for successful referrals and provides discount vouchers for those registering through a referral code. Additionally, an intuitive dashboard allows organizers to track events, registrations, and transactions, providing visual statistics to improve operational efficiency.",
+    description: [
+      "EventCreate is a responsive event management platform designed to streamline the process for organizers and attendees alike. Organizers can effortlessly create and promote events, offering multiple ticket categories and time-based promotions or discounts using coupons.",
+      "The platform includes a referral program that rewards users with points for successful referrals and provides discount vouchers for those registering through a referral code. Additionally, an intuitive dashboard allows organizers to track events, registrations, and transactions, providing visual statistics to improve operational efficiency.",
+    ],
     images: [
       { name: "/eventcreate1.png", alt: "Login" },
       { name: "/eventcreate2.png", alt: "Register" },
@@ -82,8 +86,9 @@ const projects: Project[] = [
   {
     id: 3,
     title: "HealthYo! Company Profile",
-    description:
+    description: [
       "HealthYo! is a responsive company profile website designed to be informative, engaging, and user-friendly. It utilizes Contentful as a headless CMS, enabling effortless content management and updates without requiring technical skills from programmers, ensuring that visitors always have access to the latest information.",
+    ],
     images: [
       { name: "/companyprofile1.png", alt: "Landing Page" },
       { name: "/companyprofile2.png", alt: "Landing Page" },
@@ -107,8 +112,9 @@ const projects: Project[] = [
   {
     id: 4,
     title: "Personal Portfolio",
-    description:
+    description: [
       "This portfolio is my personal website showcasing my skills and projects as a software engineer. It highlights my software development journey, demonstrating my expertise in both frontend and backend technologies, along with detailed project descriptions and insights into my background.",
+    ],
     images: [
       { name: "/portfolio1.png", alt: "Landing Page" },
       { name: "/portfolio2.png", alt: "Project" },
@@ -125,7 +131,7 @@ const projects: Project[] = [
 export default function ProjectView() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-12 2xl:mx-20">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

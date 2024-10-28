@@ -98,9 +98,13 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-xs xl:text-sm text-muted-foreground mb-2">
-          {project.description}
-        </p>
+        <div className="text-xs xl:text-sm text-muted-foreground mb-2">
+          {project.description.map((paragraph, index) => (
+            <p key={index} className="mb-2">
+              {paragraph}
+            </p>
+          ))}
+        </div>
       </CardContent>
       <CardFooter className="flex flex-wrap gap-2">
         {project.tools.map((tool, index) => (
