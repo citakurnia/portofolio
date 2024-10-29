@@ -43,7 +43,7 @@ export function ProjectCard({ project }: { project: Project }) {
                       <Image
                         src={image.name}
                         alt={`${project.title} - Image ${index + 1}`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-auto object-cover"
                         width={1200}
                         height={800}
                         quality={100}
