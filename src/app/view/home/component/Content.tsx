@@ -19,7 +19,7 @@ export default function Content() {
       </p>
       <Link
         href="/project"
-        className="text-sm text-primary-deep-blue hover:text-primary-med-blue"
+        className="text-md text-primary-deep-blue hover:text-primary-med-blue"
       >
         Discover my projects here.
       </Link>
