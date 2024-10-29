@@ -11,7 +11,7 @@ const menuList = [
     href: "/",
   },
   {
-    label: "Project",
+    label: "Projects",
     href: "/project",
   },
   {
@@ -28,7 +28,9 @@ export default function Header() {
     <header className="flex justify-between items-center px-2">
       <div className="flex items-center space-x-2">
         <span className="bg-primary-deep-blue h-4 w-4 inline-block rounded-full"></span>
-        <span className="text-normal sm:text-lg font-bold">Cita Kurnia</span>
+        <a href="/">
+          <span className="text-normal sm:text-lg font-bold">Cita Kurnia</span>
+        </a>
         <span>/ Full Stack Developer</span>
       </div>
       <nav className="hidden md:flex md:pr-4 space-x-1">
