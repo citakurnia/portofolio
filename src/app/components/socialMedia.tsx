@@ -40,7 +40,7 @@ export default function SocialMediaIcons({
       </a>
       <a
         aria-label="Direct to Cita Kurnia's LinkedIn"
-        href="https://www.linkedin.com/in/cita-kurnia-hermaningsih-004675164/"
+        href="https://www.linkedin.com/in/citakurnia/"
         target="_blank"
         className={svgClassName}
       >
