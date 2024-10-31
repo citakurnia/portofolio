@@ -79,21 +79,18 @@ export function ProjectCard({ project }: { project: Project }) {
                 <span className="sr-only">GitHub</span>
               </a>
             </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              disabled={project.liveUrl === ""}
-              asChild
-            >
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Link className="w-5 h-5" />
-                <span className="sr-only">Live Demo</span>
-              </a>
-            </Button>
+            {project.liveUrl !== "" && (
+              <Button variant="ghost" size="icon" asChild>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Link className="w-5 h-5" />
+                  <span className="sr-only">Live Demo</span>
+                </a>
+              </Button>
+            )}
           </div>
         </div>
       </CardHeader>
